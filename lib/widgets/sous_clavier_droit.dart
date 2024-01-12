@@ -6,7 +6,21 @@ class SouClavierDroit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
-        children: [Touche(), Touche(), Touche(), Touche()],
+        children: [
+          Touche(),
+          const SizedBox(
+            height: 1,
+          ),
+          Touche(),
+          const SizedBox(
+            height: 1,
+          ),
+          Touche(),
+          const SizedBox(
+            height: 1,
+          ),
+          Touche(flex: 2)
+        ],
       ),
     );
   }
