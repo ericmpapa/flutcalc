@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Cadrant extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       height: 100,
       child: Column(
         children: [
