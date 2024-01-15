@@ -21,60 +21,84 @@ class _SousClavierGaucheState extends State<SousClavierGauche> {
               children: [
                 Expanded(
                     child: Row(children: [
-                  Touche(),
+                  Touche(
+                    icon: Icons.backspace,
+                  ),
                   const SizedBox(
                     width: 1,
                   ),
-                  Touche(),
+                  Touche(
+                    symbole: "±",
+                  ),
                   const SizedBox(
                     width: 1,
                   ),
-                  Touche()
+                  Touche(
+                    symbole: "/",
+                  )
                 ])),
                 const SizedBox(
                   height: 1,
                 ),
                 Expanded(
                     child: Row(children: [
-                  Touche(),
+                  Touche(
+                    symbole: "7",
+                  ),
                   const SizedBox(
                     width: 1,
                   ),
-                  Touche(),
+                  Touche(
+                    symbole: "8",
+                  ),
                   const SizedBox(
                     width: 1,
                   ),
-                  Touche()
+                  Touche(
+                    symbole: "9",
+                  )
                 ])),
                 const SizedBox(
                   height: 1,
                 ),
                 Expanded(
                     child: Row(children: [
-                  Touche(),
+                  Touche(
+                    symbole: "4",
+                  ),
                   const SizedBox(
                     width: 1,
                   ),
-                  Touche(),
+                  Touche(
+                    symbole: "5",
+                  ),
                   const SizedBox(
                     width: 1,
                   ),
-                  Touche()
+                  Touche(
+                    symbole: "6",
+                  )
                 ])),
                 const SizedBox(
                   height: 1,
                 ),
                 Expanded(
                     child: Row(children: [
-                  Touche(),
+                  Touche(
+                    symbole: "1",
+                  ),
                   const SizedBox(
                     width: 1,
                   ),
-                  Touche(),
+                  Touche(
+                    symbole: "2",
+                  ),
                   const SizedBox(
                     width: 1,
                   ),
-                  Touche()
+                  Touche(
+                    symbole: "3",
+                  )
                 ])),
               ],
             ),
@@ -85,9 +109,12 @@ class _SousClavierGaucheState extends State<SousClavierGauche> {
               children: [
                 Touche(
                   flex: 2,
+                  symbole: "0",
                 ),
                 const SizedBox(width: 1),
-                Touche()
+                Touche(
+                  symbole: ".",
+                )
               ],
             ),
           ),

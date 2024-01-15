@@ -7,19 +7,30 @@ class SouClavierDroit extends StatelessWidget {
     return Expanded(
       child: Column(
         children: [
-          Touche(),
+          Touche(
+            symbole: "*",
+          ),
           const SizedBox(
             height: 1,
           ),
-          Touche(),
+          Touche(
+            symbole: "-",
+          ),
           const SizedBox(
             height: 1,
           ),
-          Touche(),
+          Touche(
+            symbole: "+",
+          ),
           const SizedBox(
             height: 1,
           ),
-          Touche(flex: 2)
+          Touche(
+            flex: 2,
+            couleurFond: const Color.fromARGB(255, 255, 195, 9),
+            couleurTexte: const Color.fromARGB(255, 35, 35, 35),
+            symbole: "=",
+          )
         ],
       ),
     );
