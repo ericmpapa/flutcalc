@@ -4,6 +4,10 @@ import 'package:flutcalc/widgets/touche.dart';
 import 'package:flutter/material.dart';
 
 class SousClavierGauche extends StatefulWidget {
+  void Function(String)? action;
+
+  SousClavierGauche({this.action});
+
   @override
   State<SousClavierGauche> createState() => _SousClavierGaucheState();
 }
@@ -23,18 +27,23 @@ class _SousClavierGaucheState extends State<SousClavierGauche> {
                     child: Row(children: [
                   Touche(
                     icon: Icons.backspace,
+                    action: (symbol) {
+                      widget.action!("bcp");
+                    },
                   ),
                   const SizedBox(
                     width: 1,
                   ),
                   Touche(
-                    symbole: "±",
+                    symbole: "C",
+                    action: widget.action,
                   ),
                   const SizedBox(
                     width: 1,
                   ),
                   Touche(
                     symbole: "/",
+                    action: widget.action,
                   )
                 ])),
                 const SizedBox(
@@ -44,18 +53,21 @@ class _SousClavierGaucheState extends State<SousClavierGauche> {
                     child: Row(children: [
                   Touche(
                     symbole: "7",
+                    action: widget.action,
                   ),
                   const SizedBox(
                     width: 1,
                   ),
                   Touche(
                     symbole: "8",
+                    action: widget.action,
                   ),
                   const SizedBox(
                     width: 1,
                   ),
                   Touche(
                     symbole: "9",
+                    action: widget.action,
                   )
                 ])),
                 const SizedBox(
@@ -65,18 +77,21 @@ class _SousClavierGaucheState extends State<SousClavierGauche> {
                     child: Row(children: [
                   Touche(
                     symbole: "4",
+                    action: widget.action,
                   ),
                   const SizedBox(
                     width: 1,
                   ),
                   Touche(
                     symbole: "5",
+                    action: widget.action,
                   ),
                   const SizedBox(
                     width: 1,
                   ),
                   Touche(
                     symbole: "6",
+                    action: widget.action,
                   )
                 ])),
                 const SizedBox(
@@ -86,18 +101,21 @@ class _SousClavierGaucheState extends State<SousClavierGauche> {
                     child: Row(children: [
                   Touche(
                     symbole: "1",
+                    action: widget.action,
                   ),
                   const SizedBox(
                     width: 1,
                   ),
                   Touche(
                     symbole: "2",
+                    action: widget.action,
                   ),
                   const SizedBox(
                     width: 1,
                   ),
                   Touche(
                     symbole: "3",
+                    action: widget.action,
                   )
                 ])),
               ],
@@ -110,10 +128,12 @@ class _SousClavierGaucheState extends State<SousClavierGauche> {
                 Touche(
                   flex: 2,
                   symbole: "0",
+                  action: widget.action,
                 ),
                 const SizedBox(width: 1),
                 Touche(
                   symbole: ".",
+                  action: widget.action,
                 )
               ],
             ),

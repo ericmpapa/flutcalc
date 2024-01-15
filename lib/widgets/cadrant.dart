@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Cadrant extends StatelessWidget {
+  String operation;
+
+  String resultat;
+
+  Cadrant({this.operation = "", this.resultat = ""});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -10,23 +16,23 @@ class Cadrant extends StatelessWidget {
           Expanded(
             child: Container(
               alignment: Alignment.centerRight,
-              child: const Text(
-                "operation",
-                style: TextStyle(
+              child: Text(
+                operation,
+                style: const TextStyle(
                     color: Color.fromARGB(255, 229, 225, 229), fontSize: 28),
               ),
             ),
           ),
           Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 50,
                 height: 50,
               ),
               Expanded(
-                child: Text("Resulat",
+                child: Text(resultat,
                     textAlign: TextAlign.right,
-                    style: TextStyle(color: Colors.white, fontSize: 32)),
+                    style: const TextStyle(color: Colors.white, fontSize: 32)),
               )
             ],
           )

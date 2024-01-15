@@ -6,13 +6,15 @@ class Touche extends StatelessWidget {
   Color couleurTexte;
   String symbole;
   IconData? icon;
+  void Function(String)? action;
 
   Touche(
       {this.flex = 1,
       this.couleurFond = const Color.fromARGB(255, 73, 73, 73),
       this.couleurTexte = const Color.fromARGB(255, 229, 225, 229),
       this.symbole = "",
-      this.icon});
+      this.icon,
+      this.action});
 
   @override
   Widget build(Object context) {
@@ -21,7 +23,11 @@ class Touche extends StatelessWidget {
       child: Material(
         color: couleurFond,
         child: InkWell(
-          onTap: () {},
+          onTap: () {
+            if (action != null) {
+              action!(symbole);
+            }
+          },
           child: Center(
             child: icon == null
                 ? Text(symbole,
